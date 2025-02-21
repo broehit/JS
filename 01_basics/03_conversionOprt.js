@@ -20,3 +20,18 @@ console.log(valueInNum)
    09= false
    ''=false
    'rohit'= true */
+
+   /**************************OPERATIONS************************************** */
+
+
+
+   let a = 3
+   let b = 4
+    b= a++              //postfix increment
+
+      console.log(b)
+
+   let x=5
+   let y=6
+   y= ++x              //prefix increment
+   console.log(`x: ${x}, y: ${y})`) 
