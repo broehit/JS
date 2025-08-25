@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141;">
+    <h2 style="display: flex; justify-content: center;">Amazing Images</h2>
+    
+    <div> 
+        <ul style="display: flex; justify-content: space-between; padding-top: 60px;" id="images">
+    <li> <img width="200px" height="300px" src="https://images.pexels.com/photos/33329271/pexels-photo-33329271.jpeg" alt="ocean"></li>
+    <li><img width="200px" src="https://images.pexels.com/photos/33351534/pexels-photo-33351534.jpeg" alt="river"></li>
+    <li><img width="200px" id="lighthouse" src="https://images.pexels.com/photos/33528753/pexels-photo-33528753.jpeg" alt="lighthouse"></li>
+    <li><img width="200px" src="https://images.pexels.com/photos/18071152/pexels-photo-18071152.jpeg" alt="swimming"></li>
+    <li><img width="200px" src="https://images.pexels.com/photos/33516862/pexels-photo-33516862.jpeg" alt=""></li>
+</ul>
+</div>
+
+</body>
+<script>
+    // document.getElementById("lighthouse").onclick= function(){
+    //     alert("Lighthouse")
+    // } not the best method, to add onclick cant propogate
+
+    // document.getElementById('lighthouse').addEventListener('click', function(e){
+    //     console.log(e)
+    // })
+    //type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY, altKey, ctrlKey, shiftKey, keyCode, 
+
+
+        // document.querySelector('#images').addEventListener("click", function (e){
+        //     console.log(e.target.parentNode);
+        //     let remove= e.target.parentNode
+        //     remove.remove()
+        // },false)
+
+        document.querySelector('#images').addEventListener('click',function (e){
+            console.log(e.target.tagName);
+            if (e.target.tagName === 'IMG'){
+                let remove= e.target.parentNode
+                remove.remove()
+            }
+        })
+</script>
+</html>
